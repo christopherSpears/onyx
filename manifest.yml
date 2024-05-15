@@ -1,11 +1,12 @@
 modules:
-  jira:issueAction:
-    - key: onyx-hello-world-issue-action
+  jira:issuePanel:
+    - key: onyx-hello-world-issue-panel
       resource: main
       resolver:
         function: resolver
       render: native
       title: onyx
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
   function:
     - key: resolver
       handler: index.handler
@@ -15,4 +16,7 @@ resources:
 app:
   runtime:
     name: nodejs18.x
-  id: ari:cloud:ecosystem::app/f408ac98-5632-4089-806d-9535220cf939
+  id: ari:cloud:ecosystem::app/4a7f5f2d-727b-4302-906a-fad9cb4ae042
+permissions:
+  scopes:
+    - read:jira-work
